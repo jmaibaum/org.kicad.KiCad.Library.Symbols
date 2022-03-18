@@ -19,7 +19,7 @@ modules:
     --origin=flatpak org.kicad.KiCad.Library.Symbols
   sources:
   - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/6.0.3/kicad-symbols-6.0.3.tar.gz
-    sha256: 23a93db300320e3fb033f59e82d619acc6bda005061ccd9e0cfce9e7244a4bd1
+    url: https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/6.0.4/kicad-symbols-6.0.4.tar.gz
+    sha256: 42456317d596dca4cb000c1dfbf9b94c312ac4bc4190f3d477439268d5eadba7
   - type: file
     path: org.kicad.KiCad.Library.Symbols.metainfo.xml
