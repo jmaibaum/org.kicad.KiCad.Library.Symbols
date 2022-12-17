@@ -18,8 +18,12 @@ modules:
   - appstream-compose --basename=org.kicad.KiCad.Library.Symbols --prefix=${FLATPAK_DEST}
     --origin=flatpak org.kicad.KiCad.Library.Symbols
   sources:
-  - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/6.0.9/kicad-symbols-6.0.9.tar.gz
-    sha256: b747779af0c3d52d23b3e0de73a05bafae0a4d384f1d44b5aa4d495c74d2d167
+  - type: git
+    url: https://gitlab.com/kicad/libraries/kicad-symbols.git
+    commit: 0d9559dfddd51110e5c5223901ada2445285ce80
+    tag: 6.0.9
+    x-checker-data:
+      type: git
+      tag-pattern: ^([\d\.]+)$
   - type: file
     path: org.kicad.KiCad.Library.Symbols.metainfo.xml
