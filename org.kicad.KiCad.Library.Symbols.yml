@@ -2,24 +2,28 @@ id: org.kicad.KiCad.Library.Symbols
 branch: beta
 runtime: org.kicad.KiCad
 runtime-version: beta
-sdk: org.freedesktop.Sdk//21.08
+sdk: org.freedesktop.Sdk//22.08
 build-extension: true
 separate-locales: false
 appstream-compose: false
 build-options:
   prefix: /app/extensions/Library/Symbols
 modules:
-- name: kicad-symbols
-  buildsystem: cmake-ninja
-  config-opts:
-  - -DKICAD_DATA=/app/extensions/Library/Symbols
-  post-install:
-  - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.kicad.KiCad.Library.Symbols.metainfo.xml
-  - appstream-compose --basename=org.kicad.KiCad.Library.Symbols --prefix=${FLATPAK_DEST}
-    --origin=flatpak org.kicad.KiCad.Library.Symbols
-  sources:
-  - type: archive
-    url: https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/6.0.0-rc1/kicad-symbols-6.0.0-rc1.tar.gz
-    sha256: 36b0cd55fc3f17db3200f85b457d94aaab307e59c47a8fb112e39830a8b5e096
-  - type: file
-    path: org.kicad.KiCad.Library.Symbols.metainfo.xml
+  - name: kicad-symbols
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DKICAD_DATA=/app/extensions/Library/Symbols
+    post-install:
+      - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.kicad.KiCad.Library.Symbols.metainfo.xml
+      - appstream-compose --basename=org.kicad.KiCad.Library.Symbols --prefix=${FLATPAK_DEST}
+        --origin=flatpak org.kicad.KiCad.Library.Symbols
+    sources:
+      - type: git
+        url: https://gitlab.com/kicad/libraries/kicad-symbols.git
+        commit: 3ec40517b37d78faf7ff5504c81362420c4b601f
+        tag: 6.0.10
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d\.]+[-rc\d]+)$
+      - type: file
+        path: org.kicad.KiCad.Library.Symbols.metainfo.xml
