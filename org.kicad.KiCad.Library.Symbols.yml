@@ -1,7 +1,7 @@
 id: org.kicad.KiCad.Library.Symbols
-branch: stable
+branch: beta
 runtime: org.kicad.KiCad
-runtime-version: stable
+runtime-version: beta
 sdk: org.freedesktop.Sdk//22.08
 build-extension: true
 separate-locales: false
@@ -24,6 +24,6 @@ modules:
         tag: 6.0.10
         x-checker-data:
           type: git
-          tag-pattern: ^([\d\.]+)$
+          tag-pattern: ^([\d\.]+[-rc\d]+)$
       - type: file
         path: org.kicad.KiCad.Library.Symbols.metainfo.xml
