@@ -21,7 +21,7 @@ modules:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
         commit: 3ec40517b37d78faf7ff5504c81362420c4b601f
-        tag: 6.0.10
+        tag: 6.0.11
         x-checker-data:
           type: git
           tag-pattern: ^([\d\.]+)$
