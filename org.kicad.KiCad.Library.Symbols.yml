@@ -20,8 +20,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: c9f30b0ad5fb01e836407bfce3c04a1c2a41b43b
-        tag: 7.0.2
+        commit: ceb4d7bdb7a15722c13ac355b8f5c8ca8698a797
+        tag: 7.0.3
         x-checker-data:
           type: git
           tag-pattern: ^([\d\.]+)$
