@@ -25,5 +25,7 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^([\d\.]+)$
+          versions:
+            <: 7.99.0
       - type: file
         path: org.kicad.KiCad.Library.Symbols.metainfo.xml
