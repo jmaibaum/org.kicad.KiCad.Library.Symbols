@@ -20,12 +20,12 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: 1d1398a66747f3594b8ad1d1872ef5b91d565bee
-        tag: 7.0.11
+        commit: 8b0c343d8694fe0a968e5c4af69fd161bacf7da1
+        tag: 8.0.0
         x-checker-data:
           type: git
           tag-pattern: ^([\d\.]+)$
           versions:
-            <: 7.99.0
+            <: 8.99.0
       - type: file
         path: org.kicad.KiCad.Library.Symbols.metainfo.xml
