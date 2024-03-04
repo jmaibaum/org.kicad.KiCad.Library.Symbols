@@ -19,9 +19,10 @@ modules:
         --origin=flatpak org.kicad.KiCad.Library.Symbols
     sources:
       - type: git
+        is-main-source: true
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: c8e86d4dfc2e738df7a525cb02c60d47d28570d3
-        tag: 8.0.0-rc3
+        commit: a09283a6598d4cd02c6befc4e4450cefac4cc479
+        tag: 8.0.1-rc1
         x-checker-data:
           type: git
           tag-pattern: ^([\d\.]+[-rc\d]+)$
