@@ -15,8 +15,6 @@ modules:
       - -DKICAD_DATA=/app/extensions/Library/Symbols
     post-install:
       - install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.kicad.KiCad.Library.Symbols.metainfo.xml
-      - appstream-compose --basename=org.kicad.KiCad.Library.Symbols --prefix=${FLATPAK_DEST}
-        --origin=flatpak org.kicad.KiCad.Library.Symbols
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
