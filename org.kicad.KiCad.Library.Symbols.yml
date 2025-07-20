@@ -21,9 +21,11 @@ modules:
         commit: 9e8dffce049352e96dd956239a5f11111993460b
         tag: 9.0.3
         x-checker-data:
+          type: json
+          url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
+          tag-query: "[.[] | select(.name|test(\"^[\\\\d\\\\.]+$\"; \"\"))] | first | .name"
+          timestamp-query: "[.[] | select(.name|test(\"^[\\\\d\\\\.]+$\"; \"\"))] | first | .created_at"
           is-main-source: true
-          type: git
-          tag-pattern: ^([\d\.]+)$
           versions:
             <: 9.99.0
       - type: file
