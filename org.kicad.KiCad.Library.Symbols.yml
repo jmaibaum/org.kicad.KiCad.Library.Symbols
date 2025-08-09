@@ -18,13 +18,15 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: 271cef2d6b7096dbe544610632a80ec2fce38603
-        tag: 9.0.3-rc1
+        commit: 2db19e5e494926e2c6d572874f3113da83d6ce30
+        tag: 9.0.4-rc1
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
-          tag-query: "[.[] | select(.name|test(\"^[\\\\d\\\\.]+-rc\\\\d+$\"; \"\"))] | first | .name"
-          timestamp-query: "[.[] | select(.name|test(\"^[\\\\d\\\\.]+-rc\\\\d+$\"; \"\"))] | first | .created_at"
+          tag-query: '[.[] | select(.name|test("^[\\d\\.]+-rc\\d+$"; ""))] | first
+            | .name'
+          timestamp-query: '[.[] | select(.name|test("^[\\d\\.]+-rc\\d+$"; ""))] |
+            first | .created_at'
           is-main-source: true
       - type: file
         path: org.kicad.KiCad.Library.Symbols.metainfo.xml
