@@ -18,13 +18,14 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: 9e8dffce049352e96dd956239a5f11111993460b
-        tag: 9.0.3
+        commit: 250c801d8756ab1f7b555ded85a44ba2b3b3f4ca
+        tag: 9.0.4
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
-          tag-query: "[.[] | select(.name|test(\"^[\\\\d\\\\.]+$\"; \"\"))] | first | .name"
-          timestamp-query: "[.[] | select(.name|test(\"^[\\\\d\\\\.]+$\"; \"\"))] | first | .created_at"
+          tag-query: '[.[] | select(.name|test("^[\\d\\.]+$"; ""))] | first | .name'
+          timestamp-query: '[.[] | select(.name|test("^[\\d\\.]+$"; ""))] | first
+            | .created_at'
           is-main-source: true
           versions:
             <: 9.99.0
