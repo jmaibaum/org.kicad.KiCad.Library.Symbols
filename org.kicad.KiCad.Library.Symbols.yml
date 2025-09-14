@@ -1,5 +1,4 @@
 id: org.kicad.KiCad.Library.Symbols
-branch: stable
 runtime: org.kicad.KiCad
 runtime-version: stable
 sdk: org.freedesktop.Sdk//25.08
