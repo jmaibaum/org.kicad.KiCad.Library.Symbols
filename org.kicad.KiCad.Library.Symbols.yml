@@ -1,7 +1,7 @@
 id: org.kicad.KiCad.Library.Symbols
 runtime: org.kicad.KiCad
 runtime-version: stable
-sdk: org.freedesktop.Sdk//25.08
+sdk: org.gnome.Sdk//50
 build-extension: true
 separate-locales: false
 appstream-compose: false
@@ -17,8 +17,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: 7058584a0fbe9aa2f1c9ff2acf7847726ff6922c
-        tag: 10.0.1
+        commit: 5a41d2112853c72129a9128df01021278c1aec11
+        tag: 10.0.2
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
