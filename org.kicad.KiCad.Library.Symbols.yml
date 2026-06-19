@@ -17,8 +17,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: 5a41d2112853c72129a9128df01021278c1aec11
-        tag: 10.0.3
+        commit: dcd4e9e491eee9b8835b843d8ac92e8c2a7e10f8
+        tag: 10.0.4
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
