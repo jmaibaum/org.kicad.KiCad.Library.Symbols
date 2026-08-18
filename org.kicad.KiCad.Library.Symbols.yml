@@ -22,7 +22,7 @@ modules:
         x-checker-data:
           type: json
           url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
-          tag-query: '[.[].name | select(match("^([\\d]+)\\.([\\d]+).*$"; "").captures
+          tag-query: '[.[].name | select(match("^([\\d]+)\\.([\\d]+)[\\d.]+$"; "").captures
             | (.[0].string | tonumber == 10) and (.[1].string | tonumber < 99))] |
             first'
           version-query: $tag
