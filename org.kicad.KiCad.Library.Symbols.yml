@@ -17,11 +17,12 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/kicad/libraries/kicad-symbols.git
-        commit: 7800d91437ce44e2ed0928f2ad31a287457b8a68
-        tag: 10.0.6
+        commit: 45efbd93be87e365a21d743daf9b8a07e6414df6
+        tag: 10.0.8
         x-checker-data:
           type: json
-          url: https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
+          url: 
+            https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-symbols/repository/tags
           tag-query: '[.[].name | select(match("^([\\d]+)\\.([\\d]+)[\\d.]+$"; "").captures
             | (.[0].string | tonumber == 10) and (.[1].string | tonumber < 99))] |
             first'
